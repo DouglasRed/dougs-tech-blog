@@ -4,11 +4,12 @@ const { Post, User, Comment } = require("../models");
 
 // get all posts for homepage
 router.get("/", (req, res) => {
+  console.log(req.session);
   console.log("======================");
   Post.findAll({
     attributes: [
       "id",
-      "post_comment",
+      "post_content",
       "title",
       "created_at",
       [
@@ -44,4 +45,17 @@ router.get("/", (req, res) => {
     });
 });
 
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("login");
+});
+
 module.exports = router;
+
+router.use((req, res) => {
+  res.status(404).end();
+});

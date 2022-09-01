@@ -3,7 +3,8 @@
     <li>
       <article class="post">
         <div class="title">
-          <span>({{post.post_comment}})</span>
+          <a href="{{post.post_content}}" target="_blank">{{post.title}}</a>
+          <span>({{post.post_content}})</span>
         </div>
         <div class="meta">
           {{post.vote_count}}
