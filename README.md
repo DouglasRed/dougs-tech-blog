@@ -38,3 +38,5 @@ Contact me at douglasred63@yahoo.com for any questions you have about my project
 ## View My Video
 
 View my video of this project here https://youtu.be/fCW_3l91V4M on youtube. The link is required to view the video.
+
+Visit my application on Heroku at https://dougs-tech-blog.herokuapp.com/
